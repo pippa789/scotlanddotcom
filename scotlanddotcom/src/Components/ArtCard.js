@@ -1,15 +1,14 @@
 // src/components/ArtPieceCard.js
 import React, { useState } from 'react';
-import ImageModal from './ImageModal';
-import '../index.css'; // Global styles
-import './ArtPieceCard.css'; // Specific styles for the card
+import GalleryModal from '../Components/GalleryModal';
+import '../index.css';
 
 // IMPORTANT: Replace with YOUR actual Cloudflare Account Hash
-const CLOUDFLARE_ACCOUNT_HASH = 'abcdef123456'; 
+const CLOUDFLARE_ACCOUNT_HASH = 'DZ7exJnusRX3PwDZHpesnA'; 
 
 // Helper function to construct Cloudflare Image URLs
 // It's defined here because it's specific to how this component gets image URLs.
-const getCloudflareImageUrl = (imageId, variant = 'public') => {
+const getCloudflareImageUrl = (imageId, variant = 'fullViewVariant, thumbnailVariant') => {
   if (!imageId || !CLOUDFLARE_ACCOUNT_HASH) {
     console.warn(`Missing image ID or Cloudflare Account Hash. Using fallback.`);
     return 'https://placehold.co/400x300/e0e0e0/555555?text=Image+Missing'; 
@@ -18,9 +17,10 @@ const getCloudflareImageUrl = (imageId, variant = 'public') => {
 };
 
 
-function ArtPieceCard({ id, title, description, cloudflareImageId, date, medium }) {
+function ArtCard({ id, title, description, cloudflareImageId, date, medium, thumbnailVariant }) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [buttonHovered, setButtonHovered] = useState(false); 
+
 
   const openModal = () => {
     setModalOpen(true);
@@ -31,11 +31,11 @@ function ArtPieceCard({ id, title, description, cloudflareImageId, date, medium 
   };
 
   // Generate the specific Cloudflare Image URLs for this painting instance
-  const thumbnailUrl = getCloudflareImageUrl(cloudflareImageId, 'thumbnail'); 
+  const thumbnailUrl = getCloudflareImageUrl(cloudflareImageId, 'thumbnailVariant'); 
   const fullImageUrl = getCloudflareImageUrl(cloudflareImageId, 'public'); 
 
   return (
-    <div className='art-piece-card'>
+    <div className=''>
       <img
         src={thumbnailUrl} 
         alt={title}
@@ -61,7 +61,7 @@ function ArtPieceCard({ id, title, description, cloudflareImageId, date, medium 
       </div>
 
       {isModalOpen && (
-        <ImageModal
+        <GalleryModal
           imageUrl={fullImageUrl} 
           altText={title}
           description={description}
@@ -72,4 +72,4 @@ function ArtPieceCard({ id, title, description, cloudflareImageId, date, medium 
   );
 }
 
-export default ArtPieceCard;
+export default ArtCard;

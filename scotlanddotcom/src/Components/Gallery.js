@@ -1,8 +1,7 @@
 // src/components/Gallery.js
 import React from 'react';
-import ArtPieceCard from './ArtPieceCard'; // Import the reusable ArtPieceCard
-import artPiecesData from '../data/artPieces'; // Import your central art data
-import './Gallery.css'; // General gallery grid styling
+import ArtCard from './ArtCard'; // Import the reusable ArtPieceCard
+import artPiecesData from '../Assets/ArtpieceData'; // Import your central art data
 
 function Gallery() {
   return (
@@ -14,7 +13,7 @@ function Gallery() {
         ) : (
           // --- HERE'S THE MAP FUNCTION ---
           artPiecesData.map((piece) => (
-            <ArtPieceCard
+            <ArtCard
               key={piece.id} // IMPORTANT: 'key' prop helps React efficiently update lists
               id={piece.id}
               title={piece.title}
@@ -22,6 +21,7 @@ function Gallery() {
               cloudflareImageId={piece.cloudflareImageId}
               date={piece.date}
               medium={piece.medium}
+              thumbnailVariant={piece.thumbnailVariant}
               // You can use spread operator for convenience if prop names match data keys:
               // {...piece}
             />

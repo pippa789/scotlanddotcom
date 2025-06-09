@@ -2,13 +2,15 @@
 
 const artPiecesData = [
     {
-      id: 'dunoon-123', // Unique ID for React key prop
-      title: 'Hopeful Summer (Dunoon)',
-      description: 'This is a small painting created after a long illness, hopeful for summer. Captured the serene landscape with a touch of personal reflection.',
-      cloudflareImageId: 'your-dunoon-image-id', // <<< REPLACE with your actual Cloudflare Image ID
+      id: 'kilkregan', // Unique ID for React key prop
+      title: 'Spring in Kilkregan',
+      description: 'This piece was created on a beautiful spring day spent with good friends.',
+      cloudflareImageId: '025c35d3-0a9a-42f4-6dec-f09fe408b900', // <<< REPLACE with your actual Cloudflare Image ID
       date: '2025-06-01',
-      medium: 'Oil on Canvas',
-    },
+      medium: 'Water Colour',
+      thumbnailVariant: 'landscape', // Or 'my_custom_grid_variant'
+      fullViewVariant: 'landscape',    // Or 'high_res_modal_variant'
+     },
     {
       id: 'abstract-sunset-456',
       title: 'Abstract Sunset',
