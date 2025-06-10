@@ -8,7 +8,7 @@ const CLOUDFLARE_ACCOUNT_HASH = 'DZ7exJnusRX3PwDZHpesnA';
 
 // Helper function to construct Cloudflare Image URLs
 // It's defined here because it's specific to how this component gets image URLs.
-const getCloudflareImageUrl = (imageId, variant = 'fullViewVariant, thumbnailVariant') => {
+const getCloudflareImageUrl = (imageId, variant =  'public') => {
   if (!imageId || !CLOUDFLARE_ACCOUNT_HASH) {
     console.warn(`Missing image ID or Cloudflare Account Hash. Using fallback.`);
     return 'https://placehold.co/400x300/e0e0e0/555555?text=Image+Missing'; 
@@ -17,7 +17,7 @@ const getCloudflareImageUrl = (imageId, variant = 'fullViewVariant, thumbnailVar
 };
 
 
-function ArtCard({ id, title, description, cloudflareImageId, date, medium, thumbnailVariant }) {
+function ArtCard({ id, title, description, cloudflareImageId, date, medium, galleryDisplayVariant, modalDisplayVariant  }) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [buttonHovered, setButtonHovered] = useState(false); 
 
@@ -31,17 +31,17 @@ function ArtCard({ id, title, description, cloudflareImageId, date, medium, thum
   };
 
   // Generate the specific Cloudflare Image URLs for this painting instance
-  const thumbnailUrl = getCloudflareImageUrl(cloudflareImageId, 'thumbnailVariant'); 
-  const fullImageUrl = getCloudflareImageUrl(cloudflareImageId, 'public'); 
+  const thumbnailUrl = getCloudflareImageUrl(cloudflareImageId, galleryDisplayVariant); 
+  const fullImageUrl = getCloudflareImageUrl(cloudflareImageId, modalDisplayVariant); 
 
   return (
-    <div className=''>
+    <div className='gallery-container'>
       <img
         src={thumbnailUrl} 
         alt={title}
         loading="lazy" 
         onClick={openModal} 
-        className="art-piece-thumbnail"
+        className="gallery-item"
       />
 
       <div className="art-piece-info">

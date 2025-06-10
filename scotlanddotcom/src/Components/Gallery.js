@@ -7,7 +7,7 @@ function Gallery() {
   return (
     <div className="gallery-container">
       <h1>My Art Portfolio</h1>
-      <div className="art-pieces-grid">
+      <div className="gallery-item">
         {artPiecesData.length === 0 ? (
           <p className="no-art-message">No art pieces found. Please add data to src/data/artPieces.js</p>
         ) : (
@@ -21,7 +21,8 @@ function Gallery() {
               cloudflareImageId={piece.cloudflareImageId}
               date={piece.date}
               medium={piece.medium}
-              thumbnailVariant={piece.thumbnailVariant}
+              galleryDisplayVariant={piece.galleryDisplayVariant}
+              modalDisplayVariant={piece.modalDisplayVariant}
               // You can use spread operator for convenience if prop names match data keys:
               // {...piece}
             />

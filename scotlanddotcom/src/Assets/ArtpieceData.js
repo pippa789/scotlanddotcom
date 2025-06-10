@@ -8,8 +8,8 @@ const artPiecesData = [
       cloudflareImageId: '025c35d3-0a9a-42f4-6dec-f09fe408b900', // <<< REPLACE with your actual Cloudflare Image ID
       date: '2025-06-01',
       medium: 'Water Colour',
-      thumbnailVariant: 'landscape', // Or 'my_custom_grid_variant'
-      fullViewVariant: 'landscape',    // Or 'high_res_modal_variant'
+      galleryDisplayVariant: 'landscape', // Or 'my_custom_grid_variant'
+      modalDisplayVariant: 'portrait'   // Or 'high_res_modal_variant'
      },
     {
       id: 'abstract-sunset-456',

@@ -1,0 +1,13 @@
+body{
+  background-color: black;
+}
+
+.gallery-container{
+  display: flex;
+  align-items: center;
+}
+
+.gallery-item{
+  width: 500px;
+  height: 300px;
+}
