@@ -44,10 +44,10 @@ function ArtCard({ id, title, description, cloudflareImageId, date, medium, gall
         className="gallery-item"
       />
 
-      <div className="art-piece-info">
+      {/* <div className="art-piece-info">
         <h3>{title}</h3> 
         <p>{description}</p> 
-        <small>{medium} - {date}</small>
+        <small>{medium} - {date}</small> */}
         
         <button 
           className='modal-button'
@@ -58,7 +58,7 @@ function ArtCard({ id, title, description, cloudflareImageId, date, medium, gall
         >
           More info
         </button>
-      </div>
+      {/* </div> */}
 
       {isModalOpen && (
         <GalleryModal

@@ -7,7 +7,7 @@ function Gallery() {
   return (
     <div className="gallery-container">
       <h1>My Art Portfolio</h1>
-      <div className="gallery-item">
+      <div className="gallery-container">
         {artPiecesData.length === 0 ? (
           <p className="no-art-message">No art pieces found. Please add data to src/data/artPieces.js</p>
         ) : (
