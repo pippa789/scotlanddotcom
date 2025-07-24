@@ -80,7 +80,7 @@ function Nav() {
 
       <NavLinks>
         <li>
-          <NavLink style={LinkStyle} to="/">
+          <NavLink style={LinkStyle} to="/Home">
             Home
           </NavLink>
         </li>

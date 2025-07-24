@@ -5,6 +5,10 @@ body {
   overflow-x: hidden; /* Keep this to prevent overall page horizontal scroll */
 }
 
+.title{
+  color:aliceblue;
+}
+
 .gallery-container {
   display: flex;
   flex-direction: column; /* Stacks the H1 above the gallery items */
@@ -83,5 +87,78 @@ body {
   color: #ccc;
   padding: 0 10px 10px 10px;
   font-size: 0.9em;
+  text-align: center;
+}
+
+
+/* Styles for the modal overlay (the dimmed background that covers the page) */
+.modal-overlay {
+  position: fixed; /* Positions the overlay relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Takes full viewport width */
+  height: 100vh; /* Takes full viewport height */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black backdrop */
+  display: flex; /* Use flexbox to center the modal content */
+  justify-content: center; /* Horizontally center the modal content */
+  align-items: center; /* Vertically center the modal content */
+  z-index: 1000; /* Ensures the modal is on top of other content */
+}
+
+/* Styles for the modal content box itself */
+.modal-content {
+  background-color: #222; /* Dark background for the modal */
+  padding: 25px; /* Padding inside the modal */
+  border-radius: 10px; /* Rounded corners for the modal box */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* A subtle shadow for depth */
+  position: relative; /* Allows positioning of the close button inside */
+  max-width: 80%; /* Limit modal width to 80% of screen */
+  max-height: 80vh; /* Limit modal height to 80% of viewport height */
+  overflow-y: auto; /* Add vertical scroll if content exceeds max-height */
+  display: flex; /* Use flexbox for internal layout (image + details) */
+  flex-direction: column; /* Stack image and details vertically */
+  align-items: center; /* Center content like image horizontally within the modal */
+}
+
+/* Styles for the close button */
+.modal-close-button {
+  position: absolute; /* Position relative to .modal-content */
+  top: 10px;
+  right: 15px;
+  background: none; /* No background */
+  border: none; /* No border */
+  font-size: 2em; /* Large 'x' */
+  color: white; /* White color for the 'x' */
+  cursor: pointer; /* Indicates it's clickable */
+  padding: 0; /* Remove default button padding */
+  line-height: 1; /* Align 'x' properly */
+  z-index: 10; /* Ensure button is above other modal content */
+}
+
+.modal-close-button:hover {
+  color: #aaa; /* Slightly dim on hover */
+}
+
+/* Styles for the image inside the modal */
+.modal-image {
+  max-width: 100%; /* Ensure image fits within modal content */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes any extra space below the image */
+  margin-bottom: 15px; /* Space between image and details */
+  border-radius: 5px; /* Slightly rounded corners for the image */
+}
+
+/* Styles for the text details inside the modal */
+.modal-details h3 {
+  color: white;
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 5px; /* Space between title and description */
+  text-align: center;
+}
+
+.modal-details p {
+  color: #ccc;
+  font-size: 1em;
+  line-height: 1.5;
   text-align: center;
 }
