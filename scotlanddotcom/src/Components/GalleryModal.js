@@ -1,4 +1,4 @@
-// src/components/ImageModal.js
+
 import React from 'react'; 
 
 const ImageModal = ({ imageUrl, altText, description, onClose }) => {
