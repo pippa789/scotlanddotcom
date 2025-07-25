@@ -75,7 +75,9 @@ const MobileNavIconContainer = styled.div`
   }
 `;
 
-const MobileNavLinks = styled.ul`
+const MobileNavLinks =  styled.ul.withConfig({
+  shouldForwardProp: (prop) => !['isOpen'].includes(prop)
+})`
   display: none; /* Default: hide on desktop */
   flex-direction: column;
   align-items: center; /* Center items in the mobile menu */
@@ -189,7 +191,7 @@ function Nav() {
       {/* Desktop Navigation Links (hidden on mobile) */}
       <NavLinks>
         <li>
-          <NavLink style={LinkStyle} to="/Home">
+          <NavLink style={LinkStyle} to="/">
             Home
           </NavLink>
         </li>

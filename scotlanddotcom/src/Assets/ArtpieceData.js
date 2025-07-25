@@ -62,7 +62,8 @@ const artPiecesData = [
         date: '2024-11-20',
         medium: 'Watercolour',
         galleryDisplayVariant: 'portrait', // Or 'my_custom_grid_variant'
-        modalDisplayVariant: 'public'   // Or 'high_res_modal_variant'
+        modalDisplayVariant: 'public',   // Or 'high_res_modal_variant'
+        homeImageVariant:'1'
         }, 
 
         {
@@ -74,6 +75,17 @@ const artPiecesData = [
           medium: 'Watercolour',
           galleryDisplayVariant: 'landscape', // Or 'my_custom_grid_variant'
           modalDisplayVariant: 'public'   // Or 'high_res_modal_variant'
+          }, 
+
+           {
+          id: 'edge-wood',
+          title: 'the edge of the woods',
+          description: 'The edge of the woods on a summer evening with the flowers popping slightly in the fading light.',
+          cloudflareImageId: 'd2617a6d-bda1-457a-264b-e35473f25900', // <<< REPLACE with your actual Cloudflare Image ID
+          date: '2025-7-24',
+          medium: 'Watercolour',
+          galleryDisplayVariant: 'landscape', // Or 'my_custom_grid_variant'
+          modalDisplayVariant: 'landscape'   // Or 'high_res_modal_variant'
           }, 
 
           {

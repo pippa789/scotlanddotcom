@@ -2,6 +2,7 @@
 import React from 'react';
 import Gallery from './Components/Gallery'; // Import your Gallery component
 import './index.css';
+import './home.css';
 import {BrowserRouter as Router, Route, Routes, } from 'react-router'
 import Nav from './Components/Nav';
 import Home from './Home';
