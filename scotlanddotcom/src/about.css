@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+/* font-family: "Macondo", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal*/
+ 
+
+.about-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 50px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.about-text{
+  font-family: 'poppins', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 200;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+.about-left{
+  font-family: 'poppins', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 200;
+  margin-left: 50px;
+  margin-right: 500px;
+  margin-top: 20px;
+  line-height: 2;
+  line-height: 2;
+}
+
+.about-right{
+  font-family: 'poppins', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 200;
+  margin-left: -289px;
+  margin-top: 20px;
+  line-height: 2;
+  width: 400px;
+  height: 300px;
+}
+
+.about-bottom{
+  font-family: 'poppins', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 200;
+  line-height: 2;
+  margin-top: -130px;
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+.ruby{
+ width: 200px; 
+ height: 350px;
+ border:solid white;
+ margin-top: -250px;
+ margin-right: -500px;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}

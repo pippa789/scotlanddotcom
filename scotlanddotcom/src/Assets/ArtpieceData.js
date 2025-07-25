@@ -78,6 +78,18 @@ const artPiecesData = [
           }, 
 
            {
+          id: 'ruby',
+          title: 'ruby',
+          description: 'my ever faithful companion.',
+          cloudflareImageId: '02c00f98-c8f2-400a-1b45-36d13af9d600', // <<< REPLACE with your actual Cloudflare Image ID
+          date: '2024-11-20',
+          medium: 'charcol and chalk',
+          galleryDisplayVariant: 'portrait', // Or 'my_custom_grid_variant'
+          modalDisplayVariant: 'public', 
+          aboutImage:'about'
+          }, 
+
+           {
           id: 'edge-wood',
           title: 'the edge of the woods',
           description: 'The edge of the woods on a summer evening with the flowers popping slightly in the fading light.',

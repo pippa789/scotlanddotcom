@@ -1,5 +1,46 @@
-.imgbox{
-    height: 200px;
-    width: 150px;
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+/* font-family: "Macondo", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal*/
+ 
+
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: no-wrap;
+  width:100%;
+  margin-top: 30px;
+  color: white;
+  font-family: "Poppins", serif;
+  font-style:thin;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight:200;
+  font-size: 18px;
+  padding-bottom:20px;
+}
+
+.home-text{
+  font-weight: 200;
+  margin-right: 100px;
+  margin-left:75px;
+  font-size: 17px;
+  color: white;
+}
+
+.cover{
+  height: 431px;
+  width: 300px;
+  margin-top: 40px;
+  margin-bottom:0px ;
+  background-repeat: no-repeat;  
 }
