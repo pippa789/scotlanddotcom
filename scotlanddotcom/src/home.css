@@ -44,3 +44,20 @@
   margin-bottom:0px ;
   background-repeat: no-repeat;  
 }
+
+/* This targets the container div we wrapped around your video */
+.hero-video-container {
+  width: 100%;
+  max-width: 650px;       /* Adjust this number down (e.g., 500px) to make it even smaller */
+  margin: 2.5rem auto;    /* Centers it beautifully and adds breathing room top and bottom */
+  padding: 0 1rem;        /* Keeps it from touching the screen edges on mobile */
+}
+
+/* This forces the video itself to perfectly fill that container */
+.homepage-hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;    /* Optional: gives it soft, organic corners like a sketchpad */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Optional: a very soft shadow to make it lift off the page */
+}
