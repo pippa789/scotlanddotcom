@@ -1,37 +1,30 @@
 import React from 'react';
 import './index.css';
-import artpieceData from './Assets/ArtpieceData'
-import './home.css'
 
+import './home.css'
+import heroAnimation from './Assets/foxes-in-the-woods.mp4';
 function Home() {
-  const CLOUDFLARE_IMAGES_BASE_URL = 'https://imagedelivery.net/DZ7exJnusRX3PwDZHpesnA';
-    // For this example, let's pick the 'Summer Evening' piece by its ID.
-    // You can change 'summer-evening' to the ID of any other piece you want.
-    const featuredArtPiece = artpieceData.find(piece => piece.id === 'seal');
-    let imageUrl = '';
-// If the art piece isn't found, we'll just skip rendering the image div.
-    // This keeps it simple and avoids a placeholder.
-    
-    if (featuredArtPiece) {
-        imageUrl = `${CLOUDFLARE_IMAGES_BASE_URL}/${featuredArtPiece.cloudflareImageId}/${featuredArtPiece.homeImageVariant}`;
-    }
+ 
 
   return (
     <div className='home-container'>
     <div className='title'> 
       Welcome to Original Scotland </div> 
-        <div className='home-text'> I'm Pippa Bullock, an artist living and working amidst the magic of Scotland's West Coast and Hebrides. Here, the oldtimers say the veil between our world and the divine is "thin," and it's in this space that I create. For me, painting a landscape isn't about replicating a scene; it's about interpreting nature's voice and sharing that conversation with you through each piece I create. Browse my gallery to discover more. </div>
-       {/* Conditionally render the image div ONLY if imageUrl is available */}
-            {imageUrl && (
-                <div
-                    className="cover"
-                    style={{ backgroundImage: `url('${imageUrl}')` }}
-                
-                    title={featuredArtPiece ? featuredArtPiece.description : ''}
-                >
-                    {/* No content inside this div, it's purely for background graphic */}
-                </div>
-            )}
+        <div className='home-text'> I am Pippa Bullock, an artist living and working amidst the magic of Scotland's West Coast and Hebrides. Here, the oldtimers say the veil between our world and the divine is "thin"—and it's in this space that I paint. For me, a landscape isn't a static scene to replicate; it is a living, breathing conversation.
+
+To share that conversation, I take my traditional en plein air watercolors and bring them to life frame-by-frame. By translating physical paper grain and bleeding paint into loopable 2D animation asset packs, I create hand-crafted visual elements ready to breathe a unique, organic soul into your indie games, films, and digital stories. </div>
+       Conditionally render the image div ONLY if imageUrl is available
+        <div className="hero-video-container">
+  <video 
+    src={heroAnimation} 
+    autoPlay 
+    loop 
+    muted 
+    playsInline 
+    className="homepage-hero-video"
+  />
+</div>
+            
         </div>   
   )
 
